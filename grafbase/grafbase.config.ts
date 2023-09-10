@@ -30,6 +30,8 @@ const Test = g.model("Test", {
   liveSiteUrl: g.url(),
   githubUrl: g.url(),
   subject: g.string().search(),
+  asnwersheet: g.url().optional(),
+  answeredBy: g.relation(() => User).optional(),
   createdBy: g.relation(() => User),
 });
 // .auth((rules) => {
